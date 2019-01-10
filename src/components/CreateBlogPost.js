@@ -18,6 +18,7 @@ class CreateBlogPost extends Component {
       this.setState({ labels: labels.map(label=>({...label, selected: false})) })
     })
   }
+  
   selectLabel = (id) => {
     this.setState({ labels: this.state.labels.map(label =>
       label.id === id ? {...label, selected:!label.selected} : {...label })

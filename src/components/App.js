@@ -33,6 +33,8 @@ class App extends Component {
   componentDidMount(){
     request('/auth/token')
     .then(response => this.setAuthentication(response.data))
+
+    // 401 - Unauthorized
     .catch(err => this.setAuthentication(null))
   }
 
